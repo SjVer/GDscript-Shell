@@ -1,13 +1,8 @@
 ﻿<Properties StartupConfiguration="{4394FE7D-23AA-467A-A7EF-D7BE71986775}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Main.cs">
-    <Files>
-      <File FileName="Main.cs" Line="3" Column="11" />
-      <File FileName="MainWindow.cs" Line="10" Column="2" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.ItemProperties.GDscript__Shell PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.GDscript__Shell FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
