@@ -13,4 +13,32 @@ public partial class MainWindow : Gtk.Window
 		Application.Quit();
 		a.RetVal = true;
 	}
+
+	protected void OnButtonFileClicked(object sender, EventArgs e)
+	{
+	}
+
+	protected void OnButtonEditClicked(object sender, EventArgs e)
+	{
+	}
+
+	protected void OnButtonShellClicked(object sender, EventArgs e)
+	{
+	}
+
+	protected void OnButtonDebugClicked(object sender, EventArgs e)
+	{
+	}
+
+	protected void OnButtonOptionsClicked(object sender, EventArgs e)
+	{
+	}
+
+	protected void OnButtonWindowClicked(object sender, EventArgs e)
+	{
+	}
+
+	protected void OnButtonHelpClicked(object sender, EventArgs e)
+	{
+	}
 }

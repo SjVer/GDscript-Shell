@@ -3,20 +3,178 @@
 
 public partial class MainWindow
 {
+	private global::Gtk.VBox vbox1;
+
+	private global::Gtk.HBox hbox1;
+
+	private global::Gtk.Button buttonFile;
+
+	private global::Gtk.Button buttonEdit;
+
+	private global::Gtk.Button buttonShell;
+
+	private global::Gtk.Button buttonDebug;
+
+	private global::Gtk.Button buttonOptions;
+
+	private global::Gtk.Button buttonWindow;
+
+	private global::Gtk.Button buttonHelp;
+
+	private global::Gtk.TextView textview;
+
+	private global::Gtk.HBox hbox2;
+
+	private global::Gtk.Label labelPos;
+
 	protected virtual void Build()
 	{
 		global::Stetic.Gui.Initialize(this);
 		// Widget MainWindow
 		this.Name = "MainWindow";
-		this.Title = global::Mono.Unix.Catalog.GetString("MainWindow");
+		this.Title = global::Mono.Unix.Catalog.GetString("GDScript Shell");
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
+		this.Gravity = ((global::Gdk.Gravity)(5));
+		// Container child MainWindow.Gtk.Container+ContainerChild
+		this.vbox1 = new global::Gtk.VBox();
+		this.vbox1.Name = "vbox1";
+		this.vbox1.Spacing = 6;
+		// Container child vbox1.Gtk.Box+BoxChild
+		this.hbox1 = new global::Gtk.HBox();
+		this.hbox1.Name = "hbox1";
+		this.hbox1.Spacing = 6;
+		// Container child hbox1.Gtk.Box+BoxChild
+		this.buttonFile = new global::Gtk.Button();
+		this.buttonFile.CanFocus = true;
+		this.buttonFile.Name = "buttonFile";
+		this.buttonFile.UseUnderline = true;
+		this.buttonFile.Relief = ((global::Gtk.ReliefStyle)(2));
+		this.buttonFile.Label = global::Mono.Unix.Catalog.GetString("File");
+		this.hbox1.Add(this.buttonFile);
+		global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.buttonFile]));
+		w1.Position = 0;
+		w1.Expand = false;
+		w1.Fill = false;
+		// Container child hbox1.Gtk.Box+BoxChild
+		this.buttonEdit = new global::Gtk.Button();
+		this.buttonEdit.CanFocus = true;
+		this.buttonEdit.Name = "buttonEdit";
+		this.buttonEdit.UseUnderline = true;
+		this.buttonEdit.Relief = ((global::Gtk.ReliefStyle)(2));
+		this.buttonEdit.Label = global::Mono.Unix.Catalog.GetString("Edit");
+		this.hbox1.Add(this.buttonEdit);
+		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.buttonEdit]));
+		w2.Position = 1;
+		w2.Expand = false;
+		w2.Fill = false;
+		// Container child hbox1.Gtk.Box+BoxChild
+		this.buttonShell = new global::Gtk.Button();
+		this.buttonShell.CanFocus = true;
+		this.buttonShell.Name = "buttonShell";
+		this.buttonShell.UseUnderline = true;
+		this.buttonShell.Relief = ((global::Gtk.ReliefStyle)(2));
+		this.buttonShell.Label = global::Mono.Unix.Catalog.GetString("Shell");
+		this.hbox1.Add(this.buttonShell);
+		global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.buttonShell]));
+		w3.Position = 2;
+		w3.Expand = false;
+		w3.Fill = false;
+		// Container child hbox1.Gtk.Box+BoxChild
+		this.buttonDebug = new global::Gtk.Button();
+		this.buttonDebug.CanFocus = true;
+		this.buttonDebug.Name = "buttonDebug";
+		this.buttonDebug.UseUnderline = true;
+		this.buttonDebug.Relief = ((global::Gtk.ReliefStyle)(2));
+		this.buttonDebug.Label = global::Mono.Unix.Catalog.GetString("Debug");
+		this.hbox1.Add(this.buttonDebug);
+		global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.buttonDebug]));
+		w4.Position = 3;
+		w4.Expand = false;
+		w4.Fill = false;
+		// Container child hbox1.Gtk.Box+BoxChild
+		this.buttonOptions = new global::Gtk.Button();
+		this.buttonOptions.CanFocus = true;
+		this.buttonOptions.Name = "buttonOptions";
+		this.buttonOptions.UseUnderline = true;
+		this.buttonOptions.Relief = ((global::Gtk.ReliefStyle)(2));
+		this.buttonOptions.Label = global::Mono.Unix.Catalog.GetString("Options");
+		this.hbox1.Add(this.buttonOptions);
+		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.buttonOptions]));
+		w5.Position = 4;
+		w5.Expand = false;
+		w5.Fill = false;
+		// Container child hbox1.Gtk.Box+BoxChild
+		this.buttonWindow = new global::Gtk.Button();
+		this.buttonWindow.CanFocus = true;
+		this.buttonWindow.Name = "buttonWindow";
+		this.buttonWindow.UseUnderline = true;
+		this.buttonWindow.Relief = ((global::Gtk.ReliefStyle)(2));
+		this.buttonWindow.Label = global::Mono.Unix.Catalog.GetString("Window");
+		this.hbox1.Add(this.buttonWindow);
+		global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.buttonWindow]));
+		w6.Position = 5;
+		w6.Expand = false;
+		w6.Fill = false;
+		// Container child hbox1.Gtk.Box+BoxChild
+		this.buttonHelp = new global::Gtk.Button();
+		this.buttonHelp.CanFocus = true;
+		this.buttonHelp.Name = "buttonHelp";
+		this.buttonHelp.UseUnderline = true;
+		this.buttonHelp.Relief = ((global::Gtk.ReliefStyle)(2));
+		this.buttonHelp.Label = global::Mono.Unix.Catalog.GetString("Help");
+		this.hbox1.Add(this.buttonHelp);
+		global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.buttonHelp]));
+		w7.Position = 6;
+		w7.Expand = false;
+		w7.Fill = false;
+		this.vbox1.Add(this.hbox1);
+		global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.hbox1]));
+		w8.Position = 0;
+		w8.Expand = false;
+		w8.Fill = false;
+		// Container child vbox1.Gtk.Box+BoxChild
+		this.textview = new global::Gtk.TextView();
+		this.textview.CanFocus = true;
+		this.textview.Name = "textview";
+		this.textview.WrapMode = ((global::Gtk.WrapMode)(1));
+		this.vbox1.Add(this.textview);
+		global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.textview]));
+		w9.Position = 1;
+		// Container child vbox1.Gtk.Box+BoxChild
+		this.hbox2 = new global::Gtk.HBox();
+		this.hbox2.HeightRequest = 23;
+		this.hbox2.Name = "hbox2";
+		this.hbox2.Spacing = 6;
+		// Container child hbox2.Gtk.Box+BoxChild
+		this.labelPos = new global::Gtk.Label();
+		this.labelPos.WidthRequest = 120;
+		this.labelPos.Name = "labelPos";
+		this.labelPos.LabelProp = global::Mono.Unix.Catalog.GetString("Ln: XX Col: XX");
+		this.hbox2.Add(this.labelPos);
+		global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.labelPos]));
+		w10.PackType = ((global::Gtk.PackType)(1));
+		w10.Position = 2;
+		w10.Expand = false;
+		w10.Fill = false;
+		this.vbox1.Add(this.hbox2);
+		global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.hbox2]));
+		w11.Position = 2;
+		w11.Expand = false;
+		this.Add(this.vbox1);
 		if ((this.Child != null))
 		{
 			this.Child.ShowAll();
 		}
-		this.DefaultWidth = 400;
-		this.DefaultHeight = 300;
+		this.DefaultWidth = 658;
+		this.DefaultHeight = 758;
 		this.Show();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
+		this.buttonFile.Clicked += new global::System.EventHandler(this.OnButtonFileClicked);
+		this.buttonEdit.Clicked += new global::System.EventHandler(this.OnButtonEditClicked);
+		this.buttonShell.Clicked += new global::System.EventHandler(this.OnButtonShellClicked);
+		this.buttonDebug.Clicked += new global::System.EventHandler(this.OnButtonDebugClicked);
+		this.buttonOptions.Clicked += new global::System.EventHandler(this.OnButtonOptionsClicked);
+		this.buttonWindow.Clicked += new global::System.EventHandler(this.OnButtonWindowClicked);
+		this.buttonHelp.Clicked += new global::System.EventHandler(this.OnButtonHelpClicked);
 	}
 }
