@@ -7,5 +7,5 @@ If you have any comments please make them or send them to sjoerd@marsenaar.com. 
 
 > Credits:
 The GDScript CLI (wrapper) is williamd1k0's work. Not mine.
-(repo: https://github.com/williamd1k0/gdscript-cli.git)
+(repo: https://github.com/williamd1k0/gdscript-cli.git, the code is in Assets)
 
