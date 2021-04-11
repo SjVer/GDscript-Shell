@@ -4,3 +4,9 @@
 /home/sjoerdv/Coding/Csharp/Apps/Mono/GDscript_Shell/Source/bin/Debug/GDscript_Shell.exe
 /home/sjoerdv/Coding/Csharp/Apps/Mono/GDscript_Shell/Source/obj/x86/Debug/GDscript_Shell.exe
 /home/sjoerdv/Coding/Csharp/Apps/Mono/GDscript_Shell/Source/obj/x86/Debug/GDscript_Shell.pdb
+/home/sjoerdv/Coding/Csharp/Apps/Mono/GDScript_Shell/Source/obj/x86/Debug/.NETFramework,Version=v4.6.AssemblyAttribute.cs
+/home/sjoerdv/Coding/Csharp/Apps/Mono/GDScript_Shell/Source/obj/x86/Debug/GDscript_Shell.gtk-gui.gui.stetic
+/home/sjoerdv/Coding/Csharp/Apps/Mono/GDScript_Shell/Source/bin/Debug/GDscript_Shell.pdb
+/home/sjoerdv/Coding/Csharp/Apps/Mono/GDScript_Shell/Source/bin/Debug/GDscript_Shell.exe
+/home/sjoerdv/Coding/Csharp/Apps/Mono/GDScript_Shell/Source/obj/x86/Debug/GDscript_Shell.exe
+/home/sjoerdv/Coding/Csharp/Apps/Mono/GDScript_Shell/Source/obj/x86/Debug/GDscript_Shell.pdb

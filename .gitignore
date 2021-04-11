@@ -1,2 +1,10 @@
-.vs
-.vs/*
+# Editors
+.vs/
+
+# Logs
+*.log
+*mono_chrash*
+
+# Builds
+bin/
+obj/
