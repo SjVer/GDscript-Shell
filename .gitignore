@@ -1,0 +1,19 @@
+# Editors
+.vs/
+
+# Logs
+*.log
+*mono_chrash*
+**/*mono_crash*
+Assets/logs/
+
+# Builds
+bin/
+obj/
+
+# Package folder
+Source/packages/**/*
+!/Source/package
+
+!/Assets/gdscript-cli/**/*
+!/Assets/gdscript-cli

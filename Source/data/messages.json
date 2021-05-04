@@ -1,0 +1,13 @@
+﻿{
+    Welcome: [
+        "Welcome to the GDScript Interactive Shell.",
+        "Type 'help()' for help.",
+    ],
+    Restart: [
+        "==============  GDScript Shell  ==============",
+        "New session started. Type 'help()' for help.",
+    ],
+    help: [
+        "Sup motherfucker",
+    ],
+}

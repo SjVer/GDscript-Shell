@@ -1,0 +1,32 @@
+﻿{
+    Message: {
+        Foreground: "orange",
+        Background: null,
+        Editable: false,
+    },
+    Output: {
+        Foreground: "yellow",
+        Background: null,
+        Editable: false,
+    },
+    Warning: {
+        Foreground: "red",
+        Background: null,
+        Editable: false,
+    },
+    Prompt: {
+        Foreground: "green",
+        Background: null,
+        Editable: false,
+    },
+    User: {
+        Foreground: "white",
+        Background: null,
+        Editable: true,
+    },
+    FakeUser: {
+        Foreground: "white",
+        Background: null,
+        Editable: false,
+    }
+}
