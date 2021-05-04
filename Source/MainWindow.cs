@@ -15,6 +15,7 @@ public partial class MainWindow : Window
 	public bool controlPressed;
 	public TextView mainShell;
 	public Dictionary<string, TextTag> shellTags;
+	public bool ignoringShellChange;
  
 	public MainWindow() : base(WindowType.Toplevel)
 	{
@@ -35,7 +36,7 @@ public partial class MainWindow : Window
 		noEdit = new TextTag("noEdit");
 		noEdit.Editable = false;
 
-		//Message("Restart");
+		Message("Restart", true, true);
 		Prompt();
 	}
 
@@ -81,12 +82,11 @@ public partial class MainWindow : Window
 	protected void OnShellChanged(object sender, EventArgs e)
 	{
 		// Check for newline, if so execute
-		if (cancontinue && shell.Buffer.Text.EndsWith("\n"))// && 
+		if (!ignoringShellChange && cancontinue && shell.Buffer.Text.EndsWith("\n"))// && 
 		    //CheckIfEditable(shell.Buffer.EndIter, true))
 		{
 			cancontinue = false;
 			ExecuteInput();
-			Prompt();
 			cancontinue = true;
 		}
 
@@ -120,19 +120,25 @@ public partial class MainWindow : Window
 
 	public void FullTextToCommand(string text)
 	{
+		ignoringShellChange = true;
 		text = text.Trim();
-		Console.WriteLine("\ninput: " + text);
+		Console.WriteLine("\ninput:  " + text);
 		string output = "";
 		if (!(text == "" || text == null))
 		{
 			//string first = System.Text.RegularExpressions.Regex.Match(text, @"^([\w\-]+)").Value;
 			//string args = text.Replace(first, "").Trim();
 			//output = MainClass.RunCommand(first, args).Replace("\n", "").Trim();
-			output = MainClass.RunCommand(text).Replace("\n", "").Trim();
+			output = MainClass.RunCommand(text).Trim();//.Replace("\n", "").Trim();
 			if (!(output == "")) output += "\n";
 		}
 		Console.WriteLine("output: " + output + "\n");
-		InsertText(output, shellTags["Output"]);
+		if (output.Contains("Error:"))
+			InsertText(output, shellTags["Warning"]);
+		else
+			InsertText(output, shellTags["Output"]);
+		ignoringShellChange = false;
+		Prompt();
 	}
 
 }

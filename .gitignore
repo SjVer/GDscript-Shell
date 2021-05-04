@@ -6,6 +6,8 @@
 *mono_chrash*
 **/*mono_crash*
 Assets/logs/
+nohup.out
+**/nohup.out
 
 # Builds
 bin/

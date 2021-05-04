@@ -21,19 +21,21 @@ namespace GDScript_Shell
 			Menu mBox = new Menu();
 
 			// open
-			MenuItem mOpen = new MenuItem("Run script...");
-			mOpen.Activated += delegate (object _sender, EventArgs _e)
+			MenuItem mRun = new MenuItem("Run script...");
+			mRun.Activated += delegate (object _sender, EventArgs _e)
 			{
 				// returns string[name, path, contents]
 				string[] file = MainClass.GetFileContents(parent, "Select script to run...");
 				try {
-					Console.WriteLine("Contents of file '" + file[0] + "':\n\n" + file[2] + "\n\nEnd of file.");
-					parent.mainShell.Buffer.Text = file[2];
+					parent.ignoringShellChange = true;
+					parent.InsertText(MainClass.RunCommand(file[1]), parent.shellTags["Output"]);
+					parent.ignoringShellChange = false;
+					parent.Prompt();
 				} catch {
-					Console.WriteLine("Error reading file.");
+					parent.InsertText("Error reading file '" + file[1] + "'");
 				}
 			};
-			mBox.Append(mOpen);
+			mBox.Append(mRun);
 
 			// separator
 			SeparatorMenuItem sep = new SeparatorMenuItem();
@@ -64,7 +66,7 @@ namespace GDScript_Shell
 			{
 				case Trigger.Open:
 					{
-						mBox.ActivateItem(mOpen, true);
+						mBox.ActivateItem(mRun, true);
 						break;
 					}
 				case Trigger.Close:

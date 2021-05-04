@@ -17,21 +17,29 @@ namespace GDScript_Shell.Shortcut
 				case "q":
 					FileMethods.Popup(window, window, new EventArgs(), FileMethods.Trigger.Exit);
 					break;
-				case "o":
+				case "r":
 					FileMethods.Popup(window, window, new EventArgs(), FileMethods.Trigger.Open);
 					break;
+
+
 				case "n":
 					EditMethods.Popup(window, window, new EventArgs(), EditMethods.Trigger.New);
 					break;
-				case "b":
-					window.FullTextToCommand(window.mainShell.Buffer.Text);
+				case "o":
+					EditMethods.Popup(window, window, new EventArgs(), EditMethods.Trigger.Open);
 					break;
+
+
 				case "l":
 					ShellMethods.Popup(window, window, new EventArgs(), ShellMethods.Trigger.Clear);
 					break;
-				case "r":
+				case "d":
 					window.Message("Restart");
 					break;
+				case "t":
+					new MainWindow();
+					break;
+
 
 				case "p":
 					Console.WriteLine("Getting tags per character:");

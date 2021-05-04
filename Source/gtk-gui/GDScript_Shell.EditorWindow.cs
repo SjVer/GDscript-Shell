@@ -6,7 +6,21 @@ namespace GDScript_Shell
 	{
 		private global::Gtk.VBox vbox1;
 
-		private global::Gtk.Button button1;
+		private global::Gtk.HBox hbox1;
+
+		private global::Gtk.Button buttonFile;
+
+		private global::Gtk.Button buttonEdit;
+
+		private global::Gtk.Button buttonFormat;
+
+		private global::Gtk.Button buttonRun;
+
+		private global::Gtk.Button buttonOptions;
+
+		private global::Gtk.Button buttonWindow;
+
+		private global::Gtk.Button buttonHelp;
 
 		private global::Gtk.Notebook views;
 
@@ -21,45 +35,122 @@ namespace GDScript_Shell
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			// Container child GDScript_Shell.EditorWindow.Gtk.Container+ContainerChild
 			this.vbox1 = new global::Gtk.VBox();
-			this.vbox1.Name = "vbox1";
 			this.vbox1.Spacing = 6;
 			// Container child vbox1.Gtk.Box+BoxChild
-			this.button1 = new global::Gtk.Button();
-			this.button1.CanFocus = true;
-			this.button1.Name = "button1";
-			this.button1.UseUnderline = true;
-			this.button1.Label = global::Mono.Unix.Catalog.GetString("preferences");
-			this.vbox1.Add(this.button1);
-			global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.button1]));
+			this.hbox1 = new global::Gtk.HBox();
+			this.hbox1.HeightRequest = 39;
+			this.hbox1.Name = "hbox1";
+			this.hbox1.Spacing = 6;
+			// Container child hbox1.Gtk.Box+BoxChild
+			this.buttonFile = new global::Gtk.Button();
+			this.buttonFile.Name = "buttonFile";
+			this.buttonFile.UseUnderline = true;
+			this.buttonFile.FocusOnClick = false;
+			this.buttonFile.Relief = ((global::Gtk.ReliefStyle)(2));
+			this.buttonFile.Label = global::Mono.Unix.Catalog.GetString("File");
+			this.hbox1.Add(this.buttonFile);
+			global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.buttonFile]));
 			w1.Position = 0;
 			w1.Expand = false;
 			w1.Fill = false;
+			// Container child hbox1.Gtk.Box+BoxChild
+			this.buttonEdit = new global::Gtk.Button();
+			this.buttonEdit.Name = "buttonEdit";
+			this.buttonEdit.UseUnderline = true;
+			this.buttonEdit.FocusOnClick = false;
+			this.buttonEdit.Relief = ((global::Gtk.ReliefStyle)(2));
+			this.buttonEdit.Label = global::Mono.Unix.Catalog.GetString("Edit");
+			this.hbox1.Add(this.buttonEdit);
+			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.buttonEdit]));
+			w2.Position = 1;
+			w2.Expand = false;
+			w2.Fill = false;
+			// Container child hbox1.Gtk.Box+BoxChild
+			this.buttonFormat = new global::Gtk.Button();
+			this.buttonFormat.Name = "buttonFormat";
+			this.buttonFormat.UseUnderline = true;
+			this.buttonFormat.Relief = ((global::Gtk.ReliefStyle)(2));
+			this.buttonFormat.Label = global::Mono.Unix.Catalog.GetString("Format");
+			this.hbox1.Add(this.buttonFormat);
+			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.buttonFormat]));
+			w3.Position = 2;
+			w3.Expand = false;
+			w3.Fill = false;
+			// Container child hbox1.Gtk.Box+BoxChild
+			this.buttonRun = new global::Gtk.Button();
+			this.buttonRun.Name = "buttonRun";
+			this.buttonRun.UseUnderline = true;
+			this.buttonRun.Relief = ((global::Gtk.ReliefStyle)(2));
+			this.buttonRun.Label = global::Mono.Unix.Catalog.GetString("Run");
+			this.hbox1.Add(this.buttonRun);
+			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.buttonRun]));
+			w4.Position = 3;
+			w4.Expand = false;
+			w4.Fill = false;
+			// Container child hbox1.Gtk.Box+BoxChild
+			this.buttonOptions = new global::Gtk.Button();
+			this.buttonOptions.Name = "buttonOptions";
+			this.buttonOptions.UseUnderline = true;
+			this.buttonOptions.Relief = ((global::Gtk.ReliefStyle)(2));
+			this.buttonOptions.Label = global::Mono.Unix.Catalog.GetString("Options");
+			this.hbox1.Add(this.buttonOptions);
+			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.buttonOptions]));
+			w5.Position = 4;
+			w5.Expand = false;
+			w5.Fill = false;
+			// Container child hbox1.Gtk.Box+BoxChild
+			this.buttonWindow = new global::Gtk.Button();
+			this.buttonWindow.Name = "buttonWindow";
+			this.buttonWindow.UseUnderline = true;
+			this.buttonWindow.Relief = ((global::Gtk.ReliefStyle)(2));
+			this.buttonWindow.Label = global::Mono.Unix.Catalog.GetString("Window");
+			this.hbox1.Add(this.buttonWindow);
+			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.buttonWindow]));
+			w6.Position = 5;
+			w6.Expand = false;
+			w6.Fill = false;
+			// Container child hbox1.Gtk.Box+BoxChild
+			this.buttonHelp = new global::Gtk.Button();
+			this.buttonHelp.Name = "buttonHelp";
+			this.buttonHelp.UseUnderline = true;
+			this.buttonHelp.Relief = ((global::Gtk.ReliefStyle)(2));
+			this.buttonHelp.Label = global::Mono.Unix.Catalog.GetString("Help");
+			this.hbox1.Add(this.buttonHelp);
+			global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.buttonHelp]));
+			w7.Position = 6;
+			w7.Expand = false;
+			w7.Fill = false;
+			this.vbox1.Add(this.hbox1);
+			global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.hbox1]));
+			w8.Position = 0;
+			w8.Expand = false;
+			w8.Fill = false;
 			// Container child vbox1.Gtk.Box+BoxChild
 			this.views = new global::Gtk.Notebook();
 			this.views.CanFocus = true;
 			this.views.Name = "views";
 			this.views.CurrentPage = 0;
 			this.vbox1.Add(this.views);
-			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.views]));
-			w2.Position = 1;
+			global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.views]));
+			w9.Position = 1;
 			// Container child vbox1.Gtk.Box+BoxChild
 			this.label3 = new global::Gtk.Label();
 			this.label3.Name = "label3";
 			this.vbox1.Add(this.label3);
-			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.label3]));
-			w3.Position = 2;
-			w3.Expand = false;
-			w3.Fill = false;
+			global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.label3]));
+			w10.Position = 2;
+			w10.Expand = false;
+			w10.Fill = false;
 			this.Add(this.vbox1);
 			if ((this.Child != null))
 			{
 				this.Child.ShowAll();
 			}
-			this.DefaultWidth = 400;
-			this.DefaultHeight = 300;
+			this.DefaultWidth = 554;
+			this.DefaultHeight = 517;
 			this.Show();
 			this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
-			this.button1.Clicked += new global::System.EventHandler(this.OnButton1Clicked);
+			this.buttonRun.Clicked += new global::System.EventHandler(this.OnButtonRunClicked);
 		}
 	}
 }

@@ -35,13 +35,19 @@ public partial class MainWindow : Window
 		FullTextToCommand(input);
 	}
 
-	public void Message(string title)
+	public void Message(string title, bool ignoreNoNewline = false, bool noPrompt = false)
 	{
+		ignoringShellChange = true;
+		if (!shell.Buffer.Text.EndsWith("\n", StringComparison.Ordinal) && !ignoreNoNewline)
+			InsertText("\n", shellTags["Message"]);
 		string[] lines = MainClass.Messages[title];
 		foreach (string line in lines)
 		{
 			InsertText(line + "\n", shellTags["Message"]);
 		}
+		ignoringShellChange = false;
+		if (!noPrompt)
+			Prompt();
 	}
 
 
