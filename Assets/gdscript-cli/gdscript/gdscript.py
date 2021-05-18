@@ -211,6 +211,7 @@ class ScriptProcess(object):
     def save_script(self):
         with open(self.script, 'w', encoding='utf-8') as gds:
             gds.write(str(self.script_body))
+            print(self.script_body)
         del gds
 
     def parse_json(self, output):

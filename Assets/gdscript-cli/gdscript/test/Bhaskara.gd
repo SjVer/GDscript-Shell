@@ -1,4 +1,4 @@
-extends Node
+# extends Node
 
 export(float) var a = 2
 export(float) var b = -4
